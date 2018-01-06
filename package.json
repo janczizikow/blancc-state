@@ -1,0 +1,58 @@
+{
+  "name": "blancc-state",
+  "description": "Blancc State",
+  "version": "1.0.0",
+  "homepage": "https://www.blanccstate.com",
+  "author": "Jan Czizikow <jan.czizikow@gmail.com>",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "gatsby": "^1.9.110",
+    "gatsby-link": "^1.6.27",
+    "gatsby-plugin-favicon": "^2.1.1",
+    "gatsby-plugin-glamor": "^1.6.10",
+    "gatsby-plugin-google-tagmanager": "^1.0.12",
+    "gatsby-plugin-manifest": "^1.0.12",
+    "gatsby-plugin-netlify": "^1.0.12",
+    "gatsby-plugin-nprogress": "^1.0.9",
+    "gatsby-plugin-offline": "^1.0.12",
+    "gatsby-plugin-react-helmet": "^1.0.8",
+    "gatsby-plugin-react-next": "^1.0.7",
+    "gatsby-plugin-resolve-src": "^1.0.0",
+    "gatsby-plugin-sitemap": "^1.2.9",
+    "gatsby-plugin-typography": "^1.7.10",
+    "gatsby-remark-autolink-headers": "^1.4.11",
+    "gatsby-remark-images": "^1.5.36",
+    "gatsby-remark-responsive-image": "^1.0.0-alpha13-alpha.435e0178",
+    "gatsby-remark-smartypants": "^1.4.10",
+    "gatsby-source-filesystem": "^1.5.11",
+    "gatsby-transformer-remark": "^1.7.26",
+    "gatsby-transformer-sharp": "^1.6.16",
+    "glamor": "^2.20.40",
+    "react-icons": "^2.2.7",
+    "react-spotify-player": "^1.0.4"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.1.2",
+    "eslint": "^4.14.0",
+    "eslint-config-fbjs": "^2.0.1",
+    "eslint-plugin-babel": "^4.1.2",
+    "eslint-plugin-flowtype": "^2.41.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.4.0",
+    "eslint-plugin-react": "^7.5.1",
+    "eslint-plugin-relay": "0.0.20",
+    "prettier": "^1.8.2"
+  }
+}
