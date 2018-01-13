@@ -3,7 +3,7 @@ path: '/about'
 title: 'About'
 ---
 
-![Jvern](./bio-vern@2x.jpg)
+![Jvern](bio-vern@2x.jpg)
 
 J-Vern is an up-and-coming artist born in La Plata, Maryland. Introduced by his grandfather to the musical arts at a young age and later to music production by his older brother, Vern developed a passion for composing music. His unique lyrical creations have been heavily influenced and inspired by his life abroad, as he was raised in different countries such as Mexico, England and Taiwan. Currently living in Shanghai China, J-Vern is working on his first Mixtape featuring members of his label Blancc State.
 

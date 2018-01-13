@@ -6,6 +6,15 @@ module.exports = {
     siteUrl: `https://www.blanccstate.com`,
   },
   plugins: [
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src`,
+        name: 'src',
+      },
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -29,9 +38,12 @@ module.exports = {
     {
       resolve: 'gatsby-transformer-remark',
       options: {
-        maxWidth: 840,
-        linkImagesToOriginal: true,
-        sizeByPixelDensity: true,
+        resolve: 'gatsby-remark-images',
+        options: {
+          maxWidth: 840,
+          linkImagesToOriginal: false,
+          sizeByPixelDensity: true,
+        },
       },
     },
     {

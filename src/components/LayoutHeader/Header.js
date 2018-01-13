@@ -9,8 +9,8 @@ import NavClose from './NavClose';
 import NavLink from './NavLink';
 import Sidebar from './Sidebar';
 
-import logo from '../../../static/logo.svg';
-// import {colors} from 'theme.js'
+import logo from '../../images/logo.svg';
+import {colors} from 'theme.js';
 
 const linkStyles = css({
   ':hover': {
@@ -122,7 +122,7 @@ export default class Header extends React.Component {
                     alignItems: 'center',
                     height: '100%',
                     padding: '0 0.9375rem',
-                    color: '#fff',
+                    color: colors.white,
                     textDecoration: 'none',
                     letterSpacing: 0.5,
                     transition: 'color 0.2s ease-out',
