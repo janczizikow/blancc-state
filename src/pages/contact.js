@@ -6,8 +6,9 @@ import Input from 'components/Input';
 import FormText from 'components/FormText';
 import Label from 'components/Label';
 import Button from 'components/Button';
+import Modal from 'components/Modal';
 
-import {colors, sharedStyles} from 'theme';
+import {sharedStyles} from 'theme';
 
 class Contact extends React.Component {
   constructor(props) {
@@ -17,10 +18,14 @@ class Contact extends React.Component {
       email: '',
       message: '',
       disabled: false,
+      isModalShown: false,
+      modalTitle: '',
+      modalMessage: '',
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.resetForm = this.resetForm.bind(this);
+    this.toggleModal = this.toggleModal.bind(this);
   }
 
   handleChange(e) {
@@ -33,13 +38,14 @@ class Contact extends React.Component {
     });
   }
 
-  resetForm() {
+  toggleModal() {
     this.setState({
-      name: '',
-      email: '',
-      message: '',
-      disabled: false,
+      isModalShown: !this.state.isModalShown,
     });
+  }
+
+  resetForm() {
+    this.setState(this.baseState);
   }
 
   handleSubmit(e, state) {
@@ -72,18 +78,24 @@ class Contact extends React.Component {
       .then(function(response) {
         if (response.status === 200) {
           self.setState({
+            modalTitle: `Thanks ${data.name}!`,
+            modalMessage: 'Your message was successfully sent. We\'ll get back to you soon.',
             name: '',
             email: '',
             message: '',
             disabled: false,
+            isModalShown: true,
           });
-          alert(`Thanks ${data.name}! We'll get back to you soon.`);
         }
-        self.setState({
-          disabled: false,
-        });
       })
-      .catch(function(error) {});
+      .catch(function(error) {
+        self.setState({
+          modalTitle: 'Aww snap!',
+          modalMessage: `Seems like something went wrong. Please try again. Error message: ${error}`,
+          disabled: false,
+          isModalShown: true,
+        });
+      });
   }
 
   render() {
@@ -94,16 +106,12 @@ class Contact extends React.Component {
         </div>
         <Container>
           <div
-            css={{
-              padding: '2.5em 0',
-              maxWidth: '52.5rem',
-              margin: '0 auto',
-            }}>
+            css={sharedStyles.content}>
             <p style={{textAlign: 'left'}}>
-              Reach out to us for any enquiries! You can use the contact form
-              below or email us directly:{' '}
-              <a css={sharedStyles.link} href="mailto:sven.stanko5150@gmail.com">
-                sven.stanko5150@gmail.com
+                Reach out to us for any enquiries! You can use the contact form
+                below or email us directly:{' '}
+              <a href="mailto:sven.stanko5150@gmail.com" css={sharedStyles.link}>
+                  sven.stanko5150@gmail.com
               </a>
             </p>
             <form onSubmit={this.handleSubmit} noValidate>
@@ -139,10 +147,13 @@ class Contact extends React.Component {
                 required
               />
               <Input type="hidden" name="_format" value="plain" />
-              <Button disabled={this.state.disabled} type="submit">
-                Send
+              <Button disabled={this.state.disabled} type="submit" value="Send">
+                {this.state.disabled ? 'Sending...' : 'Send'}
               </Button>
             </form>
+            <Modal title={this.state.modalTitle} isShown={this.state.isModalShown} onClick={this.toggleModal}>
+              {this.state.modalMessage}
+            </Modal>
           </div>
         </Container>
       </div>

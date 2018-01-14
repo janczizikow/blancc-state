@@ -28,7 +28,13 @@ export const sharedStyles = {
     alignItems: 'center',
     justifyContent: 'center',
   },
+  content: {
+    padding: '2.5em 0',
+    maxWidth: '52.5rem',
+    margin: '0 auto',
+  },
   link: {
+    textDecoration: 'none',
     color: colors.secondary,
     borderBottom: `1px dashed ${colors.secondary}`,
     ':hover': {

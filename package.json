@@ -6,6 +6,7 @@
   "author": "Jan Czizikow <jan.czizikow@gmail.com>",
   "dependencies": {
     "axios": "^0.17.1",
+    "classnames": "^2.2.5",
     "gatsby": "^1.9.110",
     "gatsby-image": "^1.0.33",
     "gatsby-link": "^1.6.27",

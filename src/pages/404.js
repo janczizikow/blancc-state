@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import Button from 'components/Button';
 import Container from 'components/Container';
 import { sharedStyles } from 'theme';
 
@@ -14,8 +14,10 @@ const NotFoundPage = () => (
       </h1>
     </div>
     <Container>
-      <p>The page you were looking for isn't here</p>
-      <Link to="/">Back to home page</Link>
+      <div css={sharedStyles.content}>
+        <p>The page you were looking for isn't here</p>
+        <Button to="/">Back to home page</Button>
+      </div>
     </Container>
   </div>
 );

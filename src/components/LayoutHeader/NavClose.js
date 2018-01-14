@@ -1,9 +1,26 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { MdClose } from 'react-icons/lib/md';
+
+import {colors} from 'theme';
+
+const propTypes = {
+  color: PropTypes.string,
+  top :PropTypes.number,
+  right: PropTypes.number,
+  bottom: PropTypes.number,
+  left: PropTypes.number,
+};
+
+const defaultProps = {
+  color: colors.white,
+
+};
 
 const NavClose = props => {
   return (
     <button
+      onClick={props.onClick}
       css={{
         position: 'absolute',
         top: 5,
@@ -17,9 +34,12 @@ const NavClose = props => {
         cursor: 'pointer',
       }}
       {...props}>
-      <MdClose size={24} color="#fff" />
+      <MdClose size={24} color={props.color} />
     </button>
   );
 };
+
+NavClose.propTypes = propTypes;
+NavClose.defaultProps = defaultProps;
 
 export default NavClose;

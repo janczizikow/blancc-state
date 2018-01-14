@@ -1,5 +1,5 @@
 import React from 'react';
-// import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types';
 import Container from 'components/Container';
 
 import { sharedStyles } from 'theme';
@@ -19,11 +19,7 @@ const MarkdownPage = props => {
       </div>
       <Container>
         <div
-          css={{
-            padding: '2.5em 0',
-            maxWidth: '52.5rem',
-            margin: '0 auto',
-          }}
+          css={sharedStyles.content}
           dangerouslySetInnerHTML={{ __html: markdownRemark.html }}
         />
       </Container>
