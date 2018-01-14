@@ -1,8 +1,8 @@
 import React from 'react';
 import SpotifyPlayer from 'react-spotify-player';
 
-import bg from 'images/bg_lg.jpg';
-import bgMd from 'images/bg_md.jpg';
+import bg from '../images/bg_lg.jpg';
+import bgMd from '../images/bg_md.jpg';
 
 const divider = {
   height: 226,
