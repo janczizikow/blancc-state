@@ -11,15 +11,15 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src`,
-        name: 'src',
+        path: `${__dirname}/src/pages`,
+        name: 'pages',
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/pages`,
-        name: 'pages',
+        path: `${__dirname}/src/images`,
+        name: 'images',
       },
     },
     {
@@ -38,12 +38,17 @@ module.exports = {
     {
       resolve: 'gatsby-transformer-remark',
       options: {
-        resolve: 'gatsby-remark-images',
-        options: {
-          maxWidth: 840,
-          linkImagesToOriginal: false,
-          sizeByPixelDensity: true,
-        },
+        plugins: [
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 840,
+              linkImagesToOriginal: false,
+              sizeByPixelDensity: true,
+            },
+          },
+          'gatsby-remark-copy-linked-files',
+        ],
       },
     },
     {
