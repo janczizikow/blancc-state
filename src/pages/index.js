@@ -15,7 +15,7 @@ const IndexPage = (props) => {
           margin: '0 auto',
           height: '100%',
           minHeight: 'calc(100vh - 60px)',
-          background: `#252b33 url("bg_lg.jpg") no-repeat 50%`,
+          background: `#252b33 url("bg_md.jpg") no-repeat 50%`,
           backgroundSize: 'cover',
           '::before': {
             position: 'absolute',
@@ -30,7 +30,7 @@ const IndexPage = (props) => {
             zIndex: 1,
           },
           '@media (min-width: 768px)': {
-            background: `#252b33 url("bg_md.jpg") no-repeat 50%`,
+            background: `#252b33 url("bg_lg.jpg") no-repeat 50%`,
             backgroundSize: 'cover',
           },
         }}>
