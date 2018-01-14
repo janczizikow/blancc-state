@@ -4,6 +4,7 @@ export const colors = {
   lightGrey: '#484848',
   border: '#2e2e2e',
   white: '#fff',
+  secondary: '#2f8be6',
 };
 
 export const fonts =
@@ -26,5 +27,12 @@ export const sharedStyles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  link: {
+    color: colors.secondary,
+    borderBottom: `1px dashed ${colors.secondary}`,
+    ':hover': {
+      borderBottom: `1px solid ${colors.secondary}`,
+    },
   },
 };

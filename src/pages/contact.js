@@ -7,7 +7,7 @@ import FormText from 'components/FormText';
 import Label from 'components/Label';
 import Button from 'components/Button';
 
-import {sharedStyles} from 'theme';
+import {colors, sharedStyles} from 'theme';
 
 class Contact extends React.Component {
   constructor(props) {
@@ -102,11 +102,7 @@ class Contact extends React.Component {
             <p style={{textAlign: 'left'}}>
               Reach out to us for any enquiries! You can use the contact form
               below or email us directly:{' '}
-              <a
-                css={{
-
-                }}
-                href="mailto:sven.stanko5150@gmail.com">
+              <a css={sharedStyles.link} href="mailto:sven.stanko5150@gmail.com">
                 sven.stanko5150@gmail.com
               </a>
             </p>

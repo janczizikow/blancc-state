@@ -9,7 +9,7 @@ let InputStyle = css({
   padding: '1em',
   marginBottom: '1em',
   width: '100%',
-  border: 0,
+  border: '1px solid transparent',
   borderRadius: 4,
   outline: 'none',
   backgroundColor: '#2a2a2a',
