@@ -70,18 +70,26 @@ class IndexPage extends React.Component {
               bottom: -285 + 58,
               width: '100%',
               minHeight: 80,
-              backgroundColor: 'rgba(40, 40, 40)',
               zIndex: 2,
             }}>
-            <SpotifyPlayer
-              uri="spotify:user:nd8y8w8o6a3k5c9trubiefvcy:playlist:6vkYiR316Gx26lEQB5ysWG"
-              size={{
-                width: '100%',
-                height: 285,
-              }}
-              view="list"
-              theme="black"
-            />
+            <div css={{
+              maxWidth: 1200,
+              padding: 0,
+              margin: '0 auto',
+              '@media (min-width: 768px)': {
+                padding: '0 1.25rem',
+              },
+            }}>
+              <SpotifyPlayer
+                uri="spotify:user:nd8y8w8o6a3k5c9trubiefvcy:playlist:6vkYiR316Gx26lEQB5ysWG"
+                size={{
+                  width: '100%',
+                  height: 285,
+                }}
+                view="list"
+                theme="black"
+              />
+            </div>
           </div>
         </div>
         <div style={divider} />
