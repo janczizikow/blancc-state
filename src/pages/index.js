@@ -1,8 +1,8 @@
 import React from 'react';
 import SpotifyPlayer from 'react-spotify-player';
 
-import bg from './bg_lg.jpg';
-import bgMd from './bg_md.jpg';
+import bg from '../images/bg_lg.jpg';
+import bgMd from '../images/bg_md.jpg';
 
 const divider = {
   height: 226,
@@ -18,7 +18,7 @@ const IndexPage = (props) => {
           margin: '0 auto',
           height: '100%',
           minHeight: 'calc(100vh - 60px)',
-          background: `#252b33 url(${bgMd}) no-repeat 50%`,
+          background: `#252b33 url('./bg_lg.jpg') no-repeat 50%`,
           backgroundSize: 'cover',
           '::before': {
             position: 'absolute',
@@ -33,7 +33,7 @@ const IndexPage = (props) => {
             zIndex: 1,
           },
           '@media (min-width: 768px)': {
-            background: `#252b33 url(${bg}) no-repeat 50%`,
+            background: `#252b33 url('./bg_md.jpg') no-repeat 50%`,
             backgroundSize: 'cover',
           },
         }}>
