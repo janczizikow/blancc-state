@@ -17,9 +17,8 @@ const socialLinks = {
   soundcloud: 'https://soundcloud.com/blanccstateradio',
 };
 
-const linkStyle = {};
 
-let footerSocial = css({ margin: '0 1.25rem' });
+let footerSocial = css({ margin: '0 1.25rem 1.25rem 1.25rem' });
 
 const Footer = props => {
   return (
@@ -45,9 +44,14 @@ const Footer = props => {
               display: 'flex',
               justifyContent: 'space-around',
               alignItems: 'center',
-              maxWidth: 315,
+              flexWrap: 'wrap',
               margin: '0 auto 1rem',
               color: '#fff',
+              '@media(min-width: 992px)': {
+                margin: 0,
+                maxWidth: 315,
+                flexWrap: 'nowrap',
+              },
               '& > a': {
                 position: 'relative',
                 display: 'flex',
@@ -66,14 +70,8 @@ const Footer = props => {
                   height: 38,
                   backgroundColor: '#323232',
                   borderRadius: '50%',
-                  opacit: 1,
-                  transition: 'all .3s',
-                },
-                '> a:hover': {
-                  ':after': {
-                    opacity: 0,
-                    transform: 'scale(1.4, 1.4)',
-                  },
+                  opacity: 1,
+                  transition: 'opacity .15s',
                 },
                 ':before': {
                   content: `''`,
@@ -86,9 +84,16 @@ const Footer = props => {
                   border: '1px solid #323232',
                   borderRadius: '50%',
                 },
-              },
-              '@media(min-width: 992px)': {
-                margin: 0,
+                '@media(min-width: 992px)': {
+                  ':hover': {
+                    ':after': {
+                      opacity: 0,
+                    },
+                    ':before': {
+                      opacity: 1,
+                    },
+                  },
+                },
               },
             }}>
             <a
@@ -122,11 +127,10 @@ const Footer = props => {
             css={{
               marginBottom: 0,
               fontSize: '0.75rem',
-              fontWeight: 300,
               color: '#50595b',
             }}>
             {' '}
-            &copy; {Y} Blancc State. All rights reserved.{' '}&#47;{' '}
+              &copy; {Y} Blancc State. All rights reserved.{' '}&#47;{' '}
             <Link to="/privacy">Privacy Policy</Link>
           </p>
         </div>
