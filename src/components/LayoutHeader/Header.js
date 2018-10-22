@@ -14,10 +14,11 @@ import {colors} from 'theme.js';
 
 const linkStyles = css({
   ':hover': {
-    color: '#b64b4b',
+    // #d23333
+    color: '#d23333',
   },
   ':active': {
-    color: '#b64b4b',
+    color: '#d23333',
   },
   // TODO
   // ':focus': {
@@ -31,7 +32,7 @@ const linkStyles = css({
   //   bottom: 0,
   //   height: 2,
   //   width: '100%',
-  //   backgroundColor: '#b64b4b',
+  //   backgroundColor: '#d23333',
   // },
 });
 
