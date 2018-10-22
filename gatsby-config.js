@@ -3,7 +3,7 @@ module.exports = {
     title: `Blancc State`,
     author: `Jan Czizikow`,
     description: `Official Website of Blancc State Production Label`,
-    siteUrl: `https://www.blanccstate.com`,
+    siteUrl: `https://blancc-state.netlify.com`,
   },
   plugins: [
     'gatsby-transformer-sharp',
@@ -26,7 +26,7 @@ module.exports = {
       resolve: 'gatsby-plugin-nprogress',
       options: {
         showSpinner: false,
-        color: '#b64b4b',
+        color: '#d23333',
       },
     },
     {
@@ -90,13 +90,6 @@ module.exports = {
           yandex: false,
           windows: false,
         },
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-google-tagmanager',
-      options: {
-        id: 'GTM-PNQ4FDK',
-        includeInDevelopment: false,
       },
     },
     {

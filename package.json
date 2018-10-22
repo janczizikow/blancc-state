@@ -2,7 +2,7 @@
   "name": "blancc-state",
   "description": "Blancc State",
   "version": "1.0.0",
-  "homepage": "https://www.blanccstate.com",
+  "homepage": "https://blancc-state.netlify.com",
   "author": "Jan Czizikow <jan.czizikow@gmail.com>",
   "dependencies": {
     "axios": "^0.17.1",
@@ -12,7 +12,6 @@
     "gatsby-link": "^1.6.27",
     "gatsby-plugin-favicon": "^2.1.1",
     "gatsby-plugin-glamor": "^1.6.10",
-    "gatsby-plugin-google-tagmanager": "^1.0.12",
     "gatsby-plugin-manifest": "^1.0.12",
     "gatsby-plugin-netlify": "^1.0.12",
     "gatsby-plugin-nprogress": "^1.0.9",
