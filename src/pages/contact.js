@@ -60,7 +60,7 @@ class Contact extends React.Component {
       disabled: true,
     });
 
-    const formspreeEmail = 'jan.czizikow@gmail.com';
+    const formspreeEmail = 'sven.stanko5150@gmail.com';
     const postURL = `//formspree.io/${formspreeEmail}`;
     let data = {
       name: this.state.name,
